@@ -1,144 +1,178 @@
 # 📊 Sistema de Auditoria de Jornada Inteligente
 
-
-
-
-
-
+---
 
 ## 🚀 Sobre o Projeto
 
-Sistema desktop desenvolvido para análise automatizada de espelhos de ponto eletrônico, com foco em auditoria de jornada, banco de horas e geração de insights para gestão de RH.
+O **Sistema de Auditoria de Jornada Inteligente** é uma aplicação desktop desenvolvida para automatizar a análise de espelhos de ponto eletrônico, eliminando processos manuais e trazendo **precisão, velocidade e inteligência** para o controle de jornada.
 
-O objetivo é substituir análises manuais por um processo inteligente, rápido e confiável.
+A solução transforma dados brutos em **insights acionáveis para o RH**, permitindo identificar inconsistências, controlar banco de horas e avaliar o desempenho dos colaboradores.
 
 ---
-## 🔍 Descrição
 
-Este projeto realiza:
+## 🎯 Principais Benefícios
 
-- **📄 Leitura automática de arquivos PDF de ponto**
-- **🧮 Cálculo de horas trabalhadas**
-- **📊 Análise semanal de jornada**
-- **⚠️ Identificação de inconsistências**
-- **💰 Controle de banco de horas (mensal e acumulado)**
-- **🏆 Classificação de desempenho do colaborador**
-- **📑 Geração de relatórios profissionais em PDF**
-- **💾 Armazenamento de histórico com SQLite**
+- ⏱️ Redução drástica do tempo de auditoria  
+- 📉 Diminuição de erros humanos  
+- 📊 Visão estratégica da jornada de trabalho  
+- 🧠 Análise inteligente de desempenho  
+- 💰 Controle preciso de banco de horas  
 
-**⚡ Ideal para equipes de RH, gestores e empresas que desejam controle total da jornada de trabalho.**
+---
 
-## 🧱 Tecnologias Utilizadas
-- Python 3.12
-- CustomTkinter (interface)
-- SQLite (persistência)
-- ReportLab (geração de PDF)
-- pdfplumber (leitura de PDF)
-### 📦 Pré-requisitos
-- Python 3.10+
-- pip instalado
-- Ambiente virtual recomendado (.venv)
+## 🔍 O que o sistema faz
 
-## ⚙️ Como executar
-### 🔹 Clonar o projeto
+- 📄 Leitura automática de arquivos PDF de ponto  
+- 🧮 Cálculo de horas trabalhadas  
+- 📊 Análise semanal da jornada  
+- ⚠️ Identificação de inconsistências  
+- 💰 Controle de banco de horas (mensal e acumulado)  
+- 🏆 Classificação de desempenho do colaborador  
+- 📑 Geração de relatórios profissionais em PDF  
+- 💾 Armazenamento de histórico com SQLite  
+
+---
+
+## 🧠 Classificação Inteligente
+
+O sistema gera um **score de 0 a 100** com base em:
+
+- Presença  
+- Consistência  
+- Carga horária  
+- Produtividade  
+
+### Classificações
+
+| Score | Classificação |
+|------|-------------|
+| 90 - 100 | 🏆 Excelente |
+| 75 - 89  | 👍 Bom |
+| 60 - 74  | ⚖️ Regular |
+| 40 - 59  | ⚠️ Atenção |
+| 0 - 39   | 🚨 Crítico |
+
+---
+
+## 📊 Auditoria Automatizada
+
+O sistema identifica automaticamente:
+
+- 📅 Horas trabalhadas por semana  
+- ⚠️ Dias com baixa produtividade (< 4h)  
+- 🔥 Dias com excesso de jornada (> 8h)  
+- 🚨 Faltas  
+- ❗ Registros incompletos  
+- 💰 Banco de horas  
+
+---
+
+## 📑 Relatórios Gerados
+
+Os relatórios são salvos automaticamente em:
+data/output/
+
+
+### Formato
+
+
+relatorio_{nome}_{mes_ano}.pdf
+
+
+### Exemplo
+
+
+relatorio_HOZANO_PEREIRA_07_2025.pdf
+
+
+---
+
+## ⚙️ Como Executar
+
+### 🔹 1. Clonar o projeto
+
 ```bash
-- 1º git clone https://github.com/seu-repo/sistema-auditoria-jornada.git
-- 2º cd sistema-auditoria-jornada
+git clone https://github.com/seu-repo/sistema-auditoria-jornada.git
+cd sistema-auditoria-jornada
 ```
-### 🔹 Instalar dependências
+
+### 🔹 2. Criar ambiente virtual (recomendado)
 ```bash
-- 1º pip install -r requirements.txt
+python -m venv .venv
 ```
-### 🔹 Executar aplicação
+
+# Linux/macOS
 ```bash
-- 1º python main.py
+source .venv/bin/activate  
 ```
 
-## 🖥️ Interface
-
-A aplicação possui interface gráfica moderna com CustomTkinter, permitindo:
-
-- Seleção de arquivos PDF
-- Visualização de resultados
-- Consulta de histórico por colaborador
-- Geração automática de relatórios
+# Windows
+```bash
+.venv\Scripts\activate
 ```
-🏗 Estrutura do Projeto
+### 🔹 3. Instalar dependências
+```bash
+pip install -r requirements.txt
+```
+### 🔹 4. Executar aplicação
+```bash
+python main.py
+```
+
+# 🖥️ Interface
+
+Interface desktop moderna construída com CustomTkinter, permitindo:
+
+Seleção de arquivos PDF
+Visualização dos resultados
+Consulta de histórico
+Geração de relatórios
+
+# 🏗️ Estrutura do Projeto
+
+```
 app/
  ├── core/         # Regras de negócio
  ├── services/     # Processamento e lógica
- ├── database/     # SQLite
+ ├── database/     # Persistência SQLite
  ├── ui/           # Interface gráfica
 
 data/
  ├── output/       # Relatórios gerados
- ```
-## 📊 Funcionalidades de Auditoria
+```
 
-
-O sistema realiza análises como:
-
-- 📅 Horas trabalhadas por semana
-- ⚠️ Dias com baixa produtividade (<4h)
-- 🔥 Dias com excesso de jornada (>8h)
-- 🚨 Identificação de faltas
-- ❗ Registros incompletos
-- 💰 Cálculo de banco de horas
-- 🧠 Classificação do Colaborador
-
-**O sistema gera um score de desempenho (0 a 100) baseado em:**
-
-- Presença
-- Consistência
-- Carga horária
-- Produtividade
-
-Classificações:
-
-🏆 Excelente
-👍 Bom
-⚖️ Regular
-⚠️ Atenção
-🚨 Crítico
-📑 Relatórios Gerados
-
-Os relatórios são automaticamente salvos em:
-
-data/output/
-
-Formato:
-
-relatorio_{nome}_{mes_ano}.pdf
-
-Exemplo:
-
-relatorio_HOZANO_PEREIRA_07_2025.pdf
-
-## 🛠 Fluxo de Funcionamento
+# 🔄 Fluxo de Processamento
 PDF → Parser → Cálculo → Banco de Dados → Classificação → Relatório PDF
 
-## 🎯 Objetivos do Sistema
+# 📚 Documentação
+
+Documentação técnica detalhada disponível em:
+
+- 📐 Arquitetura
+- 🔄 Fluxo do Sistema
+- 📏 Regras de Negócio
+- 🎯 Objetivos do Sistema
 - Automatizar auditoria de jornada
 - Reduzir erros manuais
 - Gerar insights para RH
 - Controlar banco de horas
 - Melhorar tomada de decisão
-
-## 🔮 Futuras melhorias
+- 🔮 Roadmap (Futuras melhorias)
 - 📊 Dashboard com gráficos
 - 👥 Multiusuário
-- 🌐 Versão web (SaaS)
+- 🌐 Versão Web (SaaS)
 - 📈 Ranking de colaboradores
 - 🔗 Integração com folha de pagamento
 
-### 👨‍💻 Autor
+  
+## 👨‍💻 Autor
 
-**Lucas Fontes**
+Lucas Fontes
 
-📌 Versão
+## 📌 Versão
 
-**1.0**
+1.0
 
-© Licença
+## © Licença
 
 Uso interno / projeto em desenvolvimento
