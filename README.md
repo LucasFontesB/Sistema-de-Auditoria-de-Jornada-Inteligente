@@ -1,5 +1,16 @@
 # 📊 Sistema de Auditoria de Jornada Inteligente
 
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Uso%20Interno-lightgrey?style=for-the-badge)
+![CustomTkinter](https://img.shields.io/badge/UI-CustomTkinter-blueviolet?style=for-the-badge)
+![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?style=for-the-badge)
+![ReportLab](https://img.shields.io/badge/PDF-ReportLab-red?style=for-the-badge)
+![pdfplumber](https://img.shields.io/badge/PDF%20Parser-pdfplumber-yellow?style=for-the-badge)
+![RH](https://img.shields.io/badge/Área-RH-blue?style=for-the-badge)
+![Auditoria](https://img.shields.io/badge/Foco-Auditoria%20de%20Jornada-darkgreen?style=for-the-badge)
+![Desktop](https://img.shields.io/badge/Tipo-Desktop%20App-informational?style=for-the-badge)
+
 ---
 
 ## 🚀 Sobre o Projeto
